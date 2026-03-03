@@ -1,5 +1,16 @@
 {
+  "name": "food-ordering",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm run dev\"",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
   "dependencies": {
     "razorpay": "^2.9.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
